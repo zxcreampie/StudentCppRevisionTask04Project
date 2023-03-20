@@ -35,5 +35,17 @@
 */
 
 string task02(int number) {
-	return "error";
+	int hour = number / 3600 % 24;
+	int minut = number % 3600 / 60;
+	int secs = number % 3600 % 60;
+
+	string gg = to_string(hour);
+	gg += (minut > 9 ? ":" : ":0") + to_string(minut);
+	gg += (secs > 9 ? ":" : ":0") + to_string(secs);
+
+
+
+
+	return number < 0 ? "error" : gg;
+
 }

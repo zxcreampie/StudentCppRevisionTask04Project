@@ -37,5 +37,34 @@
 */
 
 int task01(int a, int b, int c) {
-	return 0;
+	if (a <= 0 || b <= 0 || c <= 0) {
+		return 0;
+	}
+	int sum = 0;
+	if (a % 2 > 0) {
+		sum += (a / 2) + 1;
+	}
+	else {
+		sum += a / 2;
+	}
+
+
+	if (b % 2 > 0) {
+		sum += (b / 2) + 1;
+	}
+	else {
+		sum += b / 2;
+	}
+
+
+	if (c % 2 > 0) {
+		sum += (c / 2) + 1;
+	}
+	else {
+		sum += c / 2;
+	}
+
+
+
+	return sum;
 }
